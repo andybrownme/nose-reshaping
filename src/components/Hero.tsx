@@ -16,6 +16,13 @@ export const Hero = () => {
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h2 
+            className="text-2xl md:text-3xl font-bold text-primary animate-fade-down"
+            style={{ animationDelay: "0.1s" }}
+          >
+            Nose-Reshaping.com
+          </h2>
+          
           <span 
             className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wide animate-fade-down" 
             style={{ animationDelay: "0.2s" }}
