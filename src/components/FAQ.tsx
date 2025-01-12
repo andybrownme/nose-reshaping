@@ -36,7 +36,7 @@ export const FAQ = () => {
   return (
     <section className="section-padding">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold">
             Frequently Asked Questions
           </h2>
@@ -48,7 +48,12 @@ export const FAQ = () => {
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="animate-fade-up"
+                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+              >
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>
               </AccordionItem>

@@ -38,7 +38,7 @@ export const Services = () => {
   return (
     <section className="section-padding bg-secondary/50">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-4 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold">Our Services</h2>
           <p className="text-muted-foreground">
             Discover our range of specialized rhinoplasty procedures
@@ -47,7 +47,11 @@ export const Services = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={service.title} className="glass-card hover-scale">
+            <Card 
+              key={service.title} 
+              className="glass-card hover-scale animate-fade-up"
+              style={{ animationDelay: `${0.2 * (index + 1)}s` }}
+            >
               <CardHeader>
                 <CardTitle>{service.title}</CardTitle>
                 <CardDescription>{service.description}</CardDescription>
